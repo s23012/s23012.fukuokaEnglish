@@ -1,0 +1,66 @@
+import { useState } from "react";
+import { Globe } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+export default function FukuokaMannerSite() {
+  const [lang, setLang] = useState("ja");
+  const t = {
+    ja: {
+      title: "西鉄バス・福岡市営地下鉄のマナーと注意点",
+      intro: "福岡で公共交通機関を利用する際のマナーと注意点を紹介します。",
+      sections: [
+        {
+          title: "バス利用時のマナー",
+          content: "・乗車時は後方のドアから、降車時は前方のドアから降ります。\n・お年寄りや体の不自由な方に席を譲りましょう。\n・静かに過ごし、通話は控えましょう。",
+        },
+        {
+          title: "地下鉄利用時のマナー",
+          content: "・乗車時は降りる人を先に通しましょう。\n・エスカレーターでは立ち止まって利用します（地域によって異なる場合があります）。\n・大きな荷物は周囲に迷惑をかけないように持ちましょう。",
+        },
+      ],
+    },
+    en: {
+      title: "Manners and Tips for Using Nishitetsu Bus & Fukuoka Subway",
+      intro: "Learn important manners and safety tips when using public transportation in Fukuoka.",
+      sections: [
+        {
+          title: "Bus Etiquette",
+          content: "・Enter from the rear door and exit from the front.\n・Offer your seat to the elderly or people with disabilities.\n・Keep conversations quiet and avoid phone calls.",
+        },
+        {
+          title: "Subway Etiquette",
+          content: "・Let passengers exit before you enter.\n・Stand still on the escalator (rules may vary by area).\n・Carry large bags carefully to avoid disturbing others.",
+        },
+      ],
+    },
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white p-6">
+      <div className="max-w-2xl mx-auto">
+        <div className="flex justify-between items-center mb-4">
+          <h1 className="text-2xl font-bold text-blue-800">{t[lang].title}</h1>
+          <Button
+            variant="outline"
+            className="flex items-center gap-2"
+            onClick={() => setLang(lang === "ja" ? "en" : "ja")}
+          >
+            <Globe size={16} /> {lang === "ja" ? "English" : "日本語"}
+          </Button>
+        </div>
+        <p className="text-gray-700 mb-6">{t[lang].intro}</p>
+        <div className="grid gap-4">
+          {t[lang].sections.map((s, i) => (
+            <Card key={i} className="shadow-sm">
+              <CardContent className="p-4">
+                <h2 className="font-semibold text-lg mb-2 text-blue-700">{s.title}</h2>
+                <p className="whitespace-pre-line text-gray-700">{s.content}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
