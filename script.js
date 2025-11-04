@@ -1,13 +1,56 @@
-// シンプルなイベントリストを自動生成
-const events = [
-  { date: "2025-11-10", title: "English Conversation Meetup" },
-  { date: "2025-11-17", title: "Game Night in English" },
-  { date: "2025-12-01", title: "Christmas Special!" }
-];
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #333;
+  line-height: 1.7;
+}
 
-const eventList = document.getElementById("event-list");
-events.forEach(e => {
-  const li = document.createElement("li");
-  li.textContent = `${e.date}: ${e.title}`;
-  eventList.appendChild(li);
-});
+header {
+  background: #007bff;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+button {
+  background: white;
+  color: #007bff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e6f0ff;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  color: #007bff;
+  border-left: 5px solid #007bff;
+  padding-left: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  background: #e9ecef;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9em;
+  color: #555;
+}
