@@ -3,42 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fukuoka English Club</title>
+  <title>福岡の公共交通ガイド / Fukuoka Transport Guide</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Fukuoka English Club</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#events">Events</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1 id="title">福岡の公共交通ガイド</h1>
+    <button id="lang-btn">English</button>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Welcome to the Fukuoka English Club!  
-      We are a group of students who enjoy learning and practicing English together.</p>
+    <section id="bus">
+      <h2>西鉄バス</h2>
+      <p id="bus-desc">
+        西鉄バスは福岡市内を広く走る便利な交通手段です。  
+        乗車時は前方または中央のドアから乗り、降車は後方ドアから行います。  
+        車内では静かにし、席をゆずり合いましょう。
+      </p>
     </section>
 
-    <section id="events">
-      <h2>Upcoming Events</h2>
-      <ul id="event-list"></ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>📧 Email: <a href="mailto:info@fukuokaenglish.club">info@fukuokaenglish.club</a></p>
+    <section id="subway">
+      <h2>福岡市営地下鉄</h2>
+      <p id="subway-desc">
+        地下鉄は天神・博多・空港など主要エリアを結びます。  
+        駅構内では走らない、列に並ぶ、音楽の音量を下げるなどのマナーを守りましょう。
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Fukuoka English Club</p>
+    <p id="footer-text">© 2025 福岡公共交通ガイド</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
