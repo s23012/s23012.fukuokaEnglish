@@ -22,6 +22,7 @@ main {
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
 }
 
 h1, h2 {
@@ -38,4 +39,22 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   color: #777;
+}
+
+.zero-link a {
+  text-decoration: none; 
+  color: inherit;         /* 親と同じ色：リンク色消滅 */
+  font-weight: inherit;   /* 太字禁止 */
+  cursor: pointer;
+
+  padding: 0;             /* クリック領域を文字そのものに */
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.zero-link a:hover,
+.zero-link a:focus {
+  background: none;       /* ホバー時も変化なし */
+  outline: none;
 }
