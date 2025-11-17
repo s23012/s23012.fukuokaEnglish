@@ -7,6 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  
+<style>
+    /* フッター全体を小さくする（必要なら調整） */
+    footer p {
+      font-size: 0.9rem;
+      color: #444;
+      margin: 1.5rem 0;
+    }
+
+    /* 0 のリンク部分だけをわかりやすくする */
+    .zero-link a {
+      text-decoration: none;    /* 下線を消したければ */
+      font-weight: 600;
+      cursor: pointer;
+      padding: 2px 4px;         /* クリック領域を少し広げる */
+      border-radius: 4px;
+      transition: background-color 0.15s;
+    }
+
+    /* ホバーで視覚フィードバック */
+    .zero-link a:hover,
+    .zero-link a:focus {
+      background-color: rgba(0,0,0,0.06);
+      outline: none;
+    }
+  </style>
   <header>
     <h1>Fukuoka Public Transport Guide</h1>
     <p>Learn how to take the transportation.</p>
