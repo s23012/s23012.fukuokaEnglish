@@ -11,13 +11,15 @@ body {
 body {
   padding-top: 0;
 }
-
+header {
+  color: #ffffff;  /* ← 好きな色に変更 */
+}
 header {
   background-color: #0078d7;
-  color: white;
   text-align: center;
   font-size: 50px;
   padding: 2rem 1rem;
+  
 }
 
 main {
