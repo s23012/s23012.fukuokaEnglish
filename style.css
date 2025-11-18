@@ -7,11 +7,16 @@ body {
   line-height: 1.6;
 }
 
+/* 上部が隠れないように余白を補正 */
+body {
+  padding-top: 0;
+}
+
 header {
   background-color: #0078d7;
   color: white;
   text-align: center;
-  font-size: 50px
+  font-size: 50px;
   padding: 2rem 1rem;
 }
 
@@ -22,7 +27,6 @@ main {
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  
 }
 
 h1, h2 {
@@ -39,15 +43,16 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   color: white;
+  background-color: #0078d7;
 }
 
+/* リンクを数字のように見せる処理 */
 .zero-link a {
-  text-decoration: none; 
-  color: inherit;         /* 親と同じ色：リンク色消滅 */
-  font-weight: inherit;   /* 太字禁止 */
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
   cursor: pointer;
-
-  padding: 0;             /* クリック領域を文字そのものに */
+  padding: 0;
   margin: 0;
   border: none;
   background: none;
@@ -55,6 +60,6 @@ footer {
 
 .zero-link a:hover,
 .zero-link a:focus {
-  background: none;       /* ホバー時も変化なし */
+  background: none;
   outline: none;
 }
