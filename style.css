@@ -12,14 +12,13 @@ body {
   padding-top: 0;
 }
 header {
-  color: #ffffff;  /* ← 好きな色に変更 */
-}
-header {
-  background-color: #0078d7;
+  background-color:dodgerblue;
+  color:  white
   text-align: center;
   font-size: 50px;
   padding: 2rem 1rem;
-  
+  position: relative;
+  z-index: -1; /* 完全に後ろへ */
 }
 
 main {
